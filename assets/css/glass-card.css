@@ -1,0 +1,160 @@
+/* ==========================================================================
+   Archive card — frosted glass plate (v2: stronger frost)
+   Sits on top of archive.css; only restyles .array-card.
+   ========================================================================== */
+
+.array-card {
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, .40);
+  background:
+    linear-gradient(148deg,
+      rgba(255, 255, 255, .40) 0%,
+      rgba(255, 255, 255, .20) 26%,
+      rgba(255, 255, 255, .13) 58%,
+      rgba(255, 255, 255, .32) 100%);
+  -webkit-backdrop-filter: blur(18px) saturate(175%) brightness(1.12);
+  backdrop-filter: blur(18px) saturate(175%) brightness(1.12);
+  box-shadow:
+    0 70px 130px -55px rgba(0, 0, 0, .92),
+    0 2px 0 rgba(255, 255, 255, .62) inset,
+    0 -2px 0 rgba(255, 255, 255, .10) inset,
+    0 0 0 1px rgba(0, 0, 0, .45),
+    0 0 26px rgba(255, 255, 255, .18) inset,
+    0 0 60px rgba(255, 255, 255, .07) inset;
+  transition: transform 1s var(--ease), opacity .8s var(--ease), filter .8s var(--ease),
+              box-shadow 1s var(--ease), border-color 1s var(--ease);
+}
+
+/* the artwork sits inside the plate, leaving a glass margin */
+.array-card img {
+  position: absolute;
+  inset: 16px;
+  width: auto;
+  height: auto;
+  border-radius: 3px;
+  opacity: .97;
+  filter: saturate(.92) contrast(1.04);
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, .5),
+    0 0 0 2px rgba(255, 255, 255, .22),
+    0 3px 16px rgba(0, 0, 0, .4);
+  z-index: 1;
+}
+
+/* specular pass + edge bloom across the whole plate */
+.array-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  border-radius: 8px;
+  background:
+    linear-gradient(112deg,
+      rgba(255, 255, 255, .62) 0%,
+      rgba(255, 255, 255, .22) 7%,
+      rgba(255, 255, 255, .04) 20%,
+      rgba(255, 255, 255, 0) 46%,
+      rgba(255, 255, 255, .06) 66%,
+      rgba(255, 255, 255, .18) 84%,
+      rgba(255, 255, 255, .44) 100%),
+    linear-gradient(250deg,
+      rgba(255, 255, 255, .20) 0%,
+      rgba(255, 255, 255, 0) 26%),
+    linear-gradient(180deg,
+      rgba(255, 255, 255, .26) 0%,
+      rgba(255, 255, 255, 0) 12%,
+      rgba(255, 255, 255, 0) 88%,
+      rgba(255, 255, 255, .10) 100%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .16) inset,
+    0 1px 0 rgba(255, 255, 255, .72) inset;
+}
+
+/* frosted grain */
+.array-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  border-radius: 8px;
+  opacity: .15;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.82' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 140px 140px;
+}
+
+.array-card figcaption {
+  z-index: 4;
+  padding: 15px 20px;
+  border-radius: 0 0 7px 7px;
+}
+
+.array-card.is-active {
+  border-color: rgba(255, 255, 255, .58);
+  box-shadow:
+    0 96px 160px -60px rgba(0, 0, 0, .96),
+    0 2px 0 rgba(255, 255, 255, .70) inset,
+    0 -2px 0 rgba(255, 255, 255, .12) inset,
+    0 0 0 1px rgba(0, 0, 0, .5),
+    0 0 34px rgba(255, 255, 255, .22) inset,
+    0 0 80px rgba(255, 255, 255, .1) inset;
+}
+
+/* day mode: white frosted acrylic on paper */
+html[data-theme="light"] .array-card {
+  border-color: rgba(10, 11, 9, .18);
+  background:
+    linear-gradient(148deg,
+      rgba(255, 255, 255, .92) 0%,
+      rgba(255, 255, 255, .62) 26%,
+      rgba(255, 255, 255, .50) 58%,
+      rgba(255, 255, 255, .82) 100%);
+  -webkit-backdrop-filter: blur(18px) saturate(130%);
+  backdrop-filter: blur(18px) saturate(130%);
+  box-shadow:
+    0 70px 120px -55px rgba(60, 52, 38, .58),
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 0 0 1px rgba(10, 11, 9, .07),
+    0 0 26px rgba(255, 255, 255, .8) inset;
+}
+html[data-theme="light"] .array-card.is-active {
+  border-color: rgba(10, 11, 9, .28);
+}
+html[data-theme="light"] .array-card::before {
+  background:
+    linear-gradient(112deg,
+      rgba(255, 255, 255, .95) 0%,
+      rgba(255, 255, 255, .45) 7%,
+      rgba(255, 255, 255, .06) 20%,
+      rgba(255, 255, 255, 0) 46%,
+      rgba(255, 255, 255, .10) 66%,
+      rgba(255, 255, 255, .35) 84%,
+      rgba(255, 255, 255, .75) 100%),
+    linear-gradient(180deg,
+      rgba(255, 255, 255, .7) 0%,
+      rgba(255, 255, 255, 0) 12%);
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, .5) inset,
+    0 1px 0 rgba(255, 255, 255, .95) inset;
+}
+
+/* day mode: the caption becomes a light scrim so it stays readable */
+html[data-theme="light"] .array-card figcaption {
+  background: linear-gradient(transparent 4%, rgba(255, 255, 255, .74) 34%, rgba(255, 255, 255, .94));
+  color: #16170f;
+}
+html[data-theme="light"] .array-card figcaption b { color: #8a5f22; }
+html[data-theme="light"] .array-card figcaption span { color: #5f6157; }
+
+/* day mode: separate the plate from the paper a little more */
+html[data-theme="light"] .array-card {
+  box-shadow:
+    0 60px 110px -52px rgba(60, 52, 38, .68),
+    0 1px 0 rgba(255, 255, 255, 1) inset,
+    0 0 0 1px rgba(10, 11, 9, .1),
+    0 0 0 5px rgba(255, 255, 255, .4),
+    0 0 26px rgba(255, 255, 255, .8) inset;
+}
