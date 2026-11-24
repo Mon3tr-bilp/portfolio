@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+<meta charset="utf-8">
+<title>周俊宸 · 设计档案</title>
+<link rel="stylesheet" href="assets/css/archive.css">
+<link rel="stylesheet" href="assets/css/glass-card.css">
+<link rel="stylesheet" href="assets/css/print.css">
+</head>
+<body>
+
+<!-- 封面 -->
+<section class="page cover">
+  <div class="cv-brand">
+    <b>周俊宸</b>
+    <span>Information &amp; Interaction · Design Archive</span>
+  </div>
+
+  <div class="cv-mid">
+    <span class="cv-kicker">Portfolio / 设计档案 · 2026</span>
+    <h1>两份<br>设计档案</h1>
+    <p class="cv-sub">康驾护航 · 中老年慢病车载健康安全闭环<br>
+      陪伴治疗型动物机器人 · 3–6 岁自闭症儿童</p>
+    <div class="cv-rule"></div>
+    <div class="cv-list">
+      <span>档案一 <b>X-01</b> — 调研 / 设计定义 / 造型与原型 / 总结</span>
+      <span>档案二 <b>X-02</b> — 调研 / 设计定义 / 造型与原型 / 总结</span>
+    </div>
+  </div>
+
+  <div class="cv-foot">
+    <span>工业设计 · 交互设计</span>
+    <span>zjc13708596686@163.com</span>
+  </div>
+</section>
+
+<!-- 索引 -->
+<section class="page index-page">
+  <h2>档案索引</h2>
+  <p class="lead">ARCHIVE INDEX / 02 FILES · 35 PAGES OF ORIGINAL DECK</p>
+
+  <div class="index-row">
+    <span class="no">X-01</span>
+    <span class="t">康驾护航<em>Guarded Drive · 车载健康安全闭环 · 三人小组</em></span>
+    <img src="assets/img/kangjia/card.jpg" alt="">
+  </div>
+  <div class="index-row">
+    <span class="no">X-02</span>
+    <span class="t">陪伴治疗型动物机器人<em>KX-3 Companion · 3–6 岁自闭症儿童 · 独立完成</em></span>
+    <img src="assets/img/robot/card.jpg" alt="">
+  </div>
+
+  <p class="lead" style="margin-top:28px">
+    每份档案按四个阶段展开：调研（谁在什么场景下被什么卡住）、设计定义（可被检验的命题与约束）、
+    造型与原型（形态、尺寸、界面状态）、总结（价值、可持续性与未完成的部分）。
+  </p>
+</section>
+
+<!-- X-01 -->
+<section class="page doc-head">
+  <span class="no">FILE X-01</span>
+  <h2>康驾护航</h2>
+  <p class="sub">Guarded Drive — 中老年慢病车载健康安全闭环</p>
+  <dl class="spec-mini">
+    <div><dt>ROLE</dt><dd>交互设计 · 车载端与移动端界面 · 方案统筹</dd></div>
+    <div><dt>TEAM</dt><dd>朱丁振 座椅监测垫 / 张祚铭 方向盘模组</dd></div>
+    <div><dt>SCOPE</dt><dd>人群调研 / 状态机 / 车载 HMI / 小程序</dd></div>
+    <div><dt>SOURCE</dt><dd>21 页原始方案</dd></div>
+  </dl>
+</section>
+<section class="doc" data-file="x01">
+<article class="sheet" data-file="x01" data-chapter="1">
+            <header class="sheet-head">
+              <span class="sheet-no">01</span>
+              <h3>调研 <em>Research</em></h3>
+              <p>风险不是均匀分布在一天里的，它集中在「独自驾车办事」的那几十分钟。调研沿三条线交叉：确定谁最可能出事、把出事那几分钟拆成可观察的动作、再看已有方案解决了什么、还没解决什么。</p>
+            </header>
+            <div class="stats">
+              <div class="stat"><b>55–70<small>岁</small></b><span>目标人群年龄区间</span></div>
+              <div class="stat"><b>3<small>类</small></b><span>高血压 / 冠心病 / 糖尿病</span></div>
+              <div class="stat"><b>4<small>项</small></b><span>已识别的核心痛点</span></div>
+              <div class="stat"><b>2<small>端</small></b><span>车载端 + 家属小程序</span></div>
+            </div>
+            <div class="cols">
+              <div>
+                <p class="kicker">01.1 — 人群画像</p>
+                <blockquote>55–70 岁、患高血压 / 冠心病 / 糖尿病等基础慢病的自驾群体，日常用于就医、采购、接送亲属；子女多数时间不在身边，存在出行看护空白。</blockquote>
+                <p class="body">这群人不是「需要被劝停开车的人」。自驾对他们意味着按时复诊、买到想吃的菜、接孙子放学——是生活自主性本身。任何以「限制驾驶」为前提的方案，都会在第一步被用户拒绝。设计的起点因此不是监管，而是在保留方向盘的前提下降低风险。</p>
+              </div>
+              <div>
+                <p class="kicker">01.2 — 场景任务分解</p>
+                <ol class="findings">
+                  <li><b>危急时刻，多步操作直接失效</b><span>突发状况下无法完成「解锁手机 → 拨号 → 说清位置与病史」，家属也拿不到实时定位与体征。</span></li>
+                  <li><b>单一面部识别会把发病当成犯困</b><span>低头、面色痛苦被判定为疲劳驾驶，只弹「请休息」，后面没有健康干预链路。</span></li>
+                  <li><b>驾驶中的体征波动不留痕</b><span>复诊只有静态指标，缺少「在路上的那一段」作为参考。</span></li>
+                  <li><b>家属侧是长期的看护焦虑</b><span>不是一次事件，而是无法关闭的、持续的担心。</span></li>
+                </ol>
+              </div>
+            </div>
+            <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/pain-drive.jpg" alt="老年驾驶者途中突发不适、无法单手操作手机"></div><figcaption><i>FIG.01</i><span>痛点场景推演 · 任何「打开 App → 找到按钮」的路径此刻都不成立</span></figcaption></figure>
+            <p class="note"><b>未被验证的部分：</b>本项目为课程阶段方案，未开展真实用户访谈与样本统计。人群画像与痛点来自公开资料与场景推演，不宣称具备实证研究强度。</p>
+          </article>
+<article class="sheet" data-file="x01" data-chapter="2">
+            <header class="sheet-head">
+              <span class="sheet-no">02</span>
+              <h3>设计定义 <em>Define</em></h3>
+              <p>调研给出一堆事实，定义要做的只有一件事：把它们压成一句可以被检验的命题，再拆成几条彼此拉扯、必须同时满足的约束。</p>
+            </header>
+            <div class="statement">
+              <span class="tiny-label">PROPOSITION</span>
+              <p>把「发病」到「求助」之间的所有中间步骤，<em>交给车</em>——驾驶者只需要保留一个动作，甚至不需要动作。</p>
+            </div>
+            <div class="grid4">
+              <div class="card"><span class="card-i">P.01</span><h4>危急时刻只保留一个动作</h4><p>≥ 36 号大字、黑底白字、绿色健康标识；仅保留 1 个虚拟设置键，其余全部语音操作。</p></div>
+              <div class="card"><span class="card-i">P.02</span><h4>分级干预，不打断正常驾驶</h4><p>轻度仅语音提示；中度弹窗并推荐就近医疗点；重度才联动车辆避险与求助。</p></div>
+              <div class="card"><span class="card-i">P.03</span><h4>双模态融合，分开疲劳与发病</h4><p>视觉（面部姿态）+ 体征（心率 / 血氧 / 心电 / 坐姿）交叉判定。</p></div>
+              <div class="card"><span class="card-i">P.04</span><h4>信息一次同步，不让用户复述</h4><p>蓝牙单次触发完成：语音安抚、家属推送定位 + 体征 + 病史、同步急救点、车辆解锁车门。</p></div>
+            </div>
+            <div class="cols">
+              <div>
+                <p class="kicker">02.2 — 三层状态模型</p>
+                <div class="ladder">
+                  <div class="lv l1"><b>L1 正常态</b><span>左侧 1/3 显示心率、血氧，黑底白字 + 绿色健康标识；右侧 2/3 为导航。界面安静，不制造焦虑。</span></div>
+                  <div class="lv l2"><b>L2 预警态</b><span>顶部高亮黄色弹窗，大字显示预警原因与建议，语音同步播报，支持语音应答「是 / 否」导航。</span></div>
+                  <div class="lv l3"><b>L3 紧急态</b><span>全屏红色，白色大字「救援已出发」与倒计时；无多余按钮，循环语音引导，避免慌乱误触。</span></div>
+                </div>
+              </div>
+              <div>
+                <p class="kicker">02.3 — 系统构成</p>
+                <ol class="findings">
+                  <li><b>A · 车载端｜驾驶主操作</b><span>实时监测 / 分级预警 / 一键求助 / 联动救援。信息按「一眼判读」组织，其余交给语音。</span></li>
+                  <li><b>B · 硬件｜后装不改车</b><span>方向盘集成监测模组 + 座椅体征监测垫。用户自行 5 分钟安装，不依赖 4S 店。</span></li>
+                  <li><b>C · 家属端｜远程看护</b><span>实时位置地图、健康状态大卡片、一键呼叫车主 / 急救、出行健康档案与告警记录。</span></li>
+                </ol>
+              </div>
+            </div>
+          </article>
+<article class="sheet" data-file="x01" data-chapter="3">
+            <header class="sheet-head">
+              <span class="sheet-no">03</span>
+              <h3>造型与原型 <em>Prototype</em></h3>
+              <p>先把状态机跑通，再决定每个状态下屏幕长什么样，最后才推那两件后装硬件——因为界面的判读速度，决定了硬件必须在多快的时间内给出可靠输入。</p>
+            </header>
+            <p class="kicker">03.1 — 交互流程</p>
+            <figure class="fig wide"><div class="fig-frame"><img src="assets/img/kangjia/flow.jpg" alt="从体征采集、双模态判定、三级预警到求助联动的流程图"></div><figcaption><i>FIG.02</i><span>主链路：采集 → 判定 → 分级 → 干预 → 归档</span></figcaption></figure>
+            <p class="kicker">03.2 — 车载端三态</p>
+            <div class="trio">
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/hud-normal.jpg" alt="正常态车载界面"></div><figcaption><i>03-A</i><span>正常态 · 73 bpm / 98 %</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/hud-warning.jpg" alt="预警态界面"></div><figcaption><i>03-B</i><span>预警态 · YES / NO 语音应答</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/hud-emergency.jpg" alt="紧急态全屏红色界面"></div><figcaption><i>03-C</i><span>紧急态 · Rescue En Route</span></figcaption></figure>
+            </div>
+            <div class="darkspread">
+              <div><p class="kicker">03.3 — 关于紧急态</p><h4>紧急态为什么删掉了所有按钮</h4><p>慌乱状态下，人的点击精度会显著下降，屏幕上任何可点的东西都变成风险。因此只保留三样：一句已经发生的结论、一个正在走的数字、一条循环的语音引导。用户此刻不需要做决定，只需要被带着走。</p></div>
+              <div><p class="kicker">03.4 — 家属端</p><h4>更少的判断，而不是更多信息</h4><p>首页只回答三个问题：他在哪、他现在怎么样、我要不要动手。其余信息收进档案页，避免把看护焦虑渲染成持续的通知流。</p></div>
+            </div>
+            <div class="trio phones">
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/app-guardian.jpg" alt="家属端首页"></div><figcaption><i>03-D</i><span>首页 · 位置 / 体征 / 两个大按钮</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/app-archive.jpg" alt="出行健康档案"></div><figcaption><i>03-E</i><span>出行健康档案</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/app-alerts.jpg" alt="告警记录"></div><figcaption><i>03-F</i><span>告警记录</span></figcaption></figure>
+            </div>
+            <p class="kicker">03.5 — 两件后装硬件</p>
+            <div class="duo">
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/module-front.jpg" alt="集成监测模组正面"></div><figcaption><i>03-G</i><span>集成监测模组 · 摄像头 + 求助键 + 蓝牙屏</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/device-exploded.jpg" alt="模组爆炸图"></div><figcaption><i>03-H</i><span>爆炸图 · 外壳 / 陶瓷基板 / 传感器阵列</span></figcaption></figure>
+            </div>
+            <div class="duo">
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/seat-pad.jpg" alt="座椅体征监测垫"></div><figcaption><i>03-I</i><span>座椅体征监测垫 · 柔性 ECG 阵列</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/device-install.jpg" alt="安装指南"></div><figcaption><i>03-J</i><span>安装指南 · 5 分钟自行完成</span></figcaption></figure>
+            </div>
+            <div class="trio">
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/car-wheel.jpg" alt="方向盘实装"></div><figcaption><i>03-K</i><span>方向盘实装</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/product-in-car.jpg" alt="座椅一体感"></div><figcaption><i>03-L</i><span>座椅一体感</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/kangjia/housing-cyan-a.jpg" alt="模组壳体方案 B"></div><figcaption><i>03-M</i><span>壳体配色方案 B（青）</span></figcaption></figure>
+            </div>
+            <p class="note"><b>形态上的取舍：</b>把它做得像汽车配件，而不是医疗器械。米色与哑光灰靠近原车内饰；一旦看起来像医院设备，用户会把它理解成「我病得很重」的证据，从而拒绝使用。</p>
+          </article>
+<article class="sheet" data-file="x01" data-chapter="4">
+            <header class="sheet-head">
+              <span class="sheet-no">04</span>
+              <h3>总结 <em>Conclusion</em></h3>
+              <p>这个方案最终交付的不是一台设备，而是一条被压缩过的路径：从体征异常被判定，到救援带着病史出发，中间的每一步都不需要驾驶者清醒地配合。</p>
+            </header>
+            <div class="grid4">
+              <div class="card"><span class="card-i">V-01</span><h4>尊重自主出行的权利</h4><p>包容性设计的落地：慢病老人不需要因为疾病放弃自驾，保留生活的自主性与尊严。</p></div>
+              <div class="card"><span class="card-i">V-02</span><h4>缓解家庭看护焦虑</h4><p>填补「老人独自驾车、子女远程看护」的场景空白，突发状况第一时间响应。</p></div>
+              <div class="card"><span class="card-i">V-03</span><h4>提升急救救援效率</h4><p>前置精准定位与健康数据，减少急救沟通成本，缩短响应时间。</p></div>
+              <div class="card"><span class="card-i">V-04</span><h4>低成本、易落地</h4><p>模块化适配绝大多数家用车型，可单独更换，支持 OTA，蓝牙替代额外通信模组。</p></div>
+            </div>
+            <div class="cols">
+              <div>
+                <p class="kicker">04.2 — 局限与下一步（未完成的部分）</p>
+                <ol class="findings warn">
+                  <li><b>没有真实用户测试</b><span>老年群体的触控热区、字号可读性、语音唤醒词的可懂度，都还是设计假设。</span></li>
+                  <li><b>误报率尚未验证</b><span>双模态融合目前是判定逻辑的实现，阈值与训练数据未建立；「不误报」比「能报警」更难。</span></li>
+                  <li><b>隐私与医疗合规</b><span>连续体征与位置数据的存储周期、共享边界，需要进入真实的合规流程。</span></li>
+                  <li><b>与急救平台的接口</b><span>真正的联动救援需要点对点接口而非短信推送，涉及跨机构协作。</span></li>
+                </ol>
+              </div>
+              <div class="statement tall">
+                <span class="tiny-label">TAKEAWAY</span>
+                <p>在危急场景里，<b>好设计不是让信息更丰富，而是让该发生的事不需要人来做</b>。</p>
+              </div>
+            </div>
+          </article>
+</section>
+
+<!-- X-02 -->
+<section class="page doc-head">
+  <span class="no">FILE X-02</span>
+  <h2>陪伴治疗型动物机器人</h2>
+  <p class="sub">KX-3 Companion — 3–6 岁自闭症儿童 · 陪伴 / 治疗 / 监测</p>
+  <dl class="spec-mini">
+    <div><dt>ROLE</dt><dd>独立完成 · 调研 / 定义 / 造型 / 渲染 / 场景</dd></div>
+    <div><dt>USERS</dt><dd>3–6 岁 ASD 儿童 · 家长 · 康复治疗师</dd></div>
+    <div><dt>CORE</dt><dd>陪伴 + 治疗 + 监测 三位一体</dd></div>
+    <div><dt>SOURCE</dt><dd>14 页原始方案</dd></div>
+  </dl>
+</section>
+<section class="doc" data-file="x02">
+<article class="sheet" data-file="x02" data-chapter="1">
+            <header class="sheet-head">
+              <span class="sheet-no">01</span>
+              <h3>调研 <em>Research</em></h3>
+              <p>调研要回答三个问题：这个群体有多大、干预窗口有多窄；现有产品已经解决到什么程度；而红点、iF、红星这些获奖方案里，设计师们已经给出了哪些可以复用的答案。</p>
+            </header>
+            <div class="stats six">
+              <div class="stat"><b>1<small>/100</small></b><span>WHO 估算全球儿童 ASD 比例</span></div>
+              <div class="stat"><b>7<small>‰</small></b><span>我国 2017–2023 患病率</span></div>
+              <div class="stat"><b>1300<small>万+</small></b><span>我国孤独症患者规模</span></div>
+              <div class="stat"><b>0–6<small>岁</small></b><span>公认的最佳干预期</span></div>
+              <div class="stat"><b>21.57<small>%</small></b><span>AI 家庭干预 12 个月社交商提升</span></div>
+              <div class="stat"><b>46.49<small>%</small></b><span>发育年龄较对照组提前</span></div>
+            </div>
+            <div class="cols">
+              <div>
+                <p class="kicker">01.1 — 疾病负担与干预窗口</p>
+                <p class="body">2000 年，美国 CDC 建立自闭症与发育障碍监测（ADDM）网络。截至 2022 年 ADDM 数据，ASD 患病率已基本确认，且发病率持续上升；WHO 估算全球每 100 名儿童中约有 1 名患有孤独症谱系障碍。</p>
+                <p class="body">国内方面，研究显示 2017—2023 年我国孤独症患病率约为 7‰，患者总数超过 1300 万。<b>而 0–6 岁是最佳干预期。</b></p>
+                <p class="kicker">01.2 — 有效性证据</p>
+                <p class="note">JMIR 一项为期 12 个月的纵向观察，对 43 名 2 至 18 岁儿童评估：AI 辅助家庭干预 12 个月后，社交商平均提升 <b>21.57%</b>，发育年龄较对照组提前 <b>46.49%</b>。</p>
+              </div>
+              <div>
+                <p class="kicker">01.3 — 玩具与治疗玩具之间没有鸿沟</p>
+                <p class="body">重庆师范大学孔祥勋的研究指出：自闭症玩具与普通玩具并没有不可逾越的鸿沟——当普通玩具满足了自闭症的某方面特殊需求时，它也可以成为自闭症玩具。这条结论直接解锁了本项目的形态策略：不必发明一个新品类，可以把干预叠加在儿童本来就会喜欢的动物形态上。</p>
+                <figure class="fig"><div class="fig-frame"><img src="assets/img/robot/data-prevalence.jpg" alt="患病率分布地图"></div><figcaption><i>FIG.01</i><span>患病率分布 · 区域资源不均是干预可及性的关键变量</span></figcaption></figure>
+              </div>
+            </div>
+            <p class="kicker">01.4 — 国内外竞品</p>
+            <div class="comps">
+              <figure><img src="assets/img/robot/comp-paro.jpg" alt="PARO"><figcaption><b>PARO <em>日本</em></b><p>仿生海豹，临床验证。约 6 万元，功能单一，不可自主移动。</p></figcaption></figure>
+              <figure><img src="assets/img/robot/comp-moxie.jpg" alt="Moxie"><figcaption><b>Moxie <em>美国</em></b><p>GPT-4 驱动，课程标准化。偏硬科技感，续航约 4 小时。</p></figcaption></figure>
+              <figure><img src="assets/img/robot/comp-tombot.jpg" alt="Tombot"><figcaption><b>Tombot <em>美国</em></b><p>仿真金毛，触感极佳。纯陪伴，无专业干预。</p></figcaption></figure>
+              <figure><img src="assets/img/robot/comp-qtrobot.jpg" alt="QTrobot"><figcaption><b>QTrobot <em>卢森堡</em></b><p>专为孤独症设计。外观生硬、体积大、价格高。</p></figcaption></figure>
+              <figure><img src="assets/img/robot/comp-fuxiaozhi.jpg" alt="福小智 F1-D"><figcaption><b>福小智 F1-D <em>中国</em></b><p>脑机接口 + 眼动追踪。门槛高、配套多。</p></figcaption></figure>
+            </div>
+            <p class="kicker">01.5 — 顶尖设计获奖作品</p>
+            <div class="comps awards">
+              <figure><img src="assets/img/robot/award-touch.jpg" alt="TOUCH friends"><figcaption><b>TOUCH friends <em>红点至尊奖</em></b><p>模块化触觉交互，彻底无屏。借鉴：模块化 + 多感官。</p></figcaption></figure>
+              <figure><img src="assets/img/robot/award-augi.jpg" alt="Augi"><figcaption><b>Augi <em>好设计金奖</em></b><p>AAC 情绪表达积木。借鉴：辅助沟通与社交融合。</p></figcaption></figure>
+              <figure><img src="assets/img/robot/award-ecure.jpg" alt="ECURE"><figcaption><b>ECURE <em>iF 金奖</em></b><p>可更换毛绒外套。借鉴：可更换外观增强情感连接。</p></figcaption></figure>
+              <figure><img src="assets/img/robot/award-banban.jpg" alt="斑斑互动糖豆狗"><figcaption><b>斑斑互动糖豆狗 <em>红星金奖</em></b><p>游戏化干预、价格亲民。借鉴：游戏化 + 高性价比。</p></figcaption></figure>
+            </div>
+            <p class="note"><b>横向读下来的规律：</b>往「更像人、更智能、更专业」走，价格与感官压迫同步上升；往「更像毛绒玩具」走，情绪安抚有了，干预能力却消失。中间的空白——既被孩子接受、又具备干预能力、还买得起——正是本项目要占的位置。</p>
+          </article>
+<article class="sheet" data-file="x02" data-chapter="2">
+            <header class="sheet-head">
+              <span class="sheet-no">02</span>
+              <h3>设计定义 <em>Define</em></h3>
+              <p>调研把空白定位在「专业但难以接受、可爱但无法干预」之间。定义阶段的任务，是把这块空白翻译成一条产品约束。</p>
+            </header>
+            <div class="statement">
+              <span class="tiny-label">PROPOSITION</span>
+              <p>把专业干预藏进一只孩子<em>愿意主动抱住</em>的动物里——让治疗看起来像玩耍，让记录发生在被抱着的时候。</p>
+            </div>
+            <div class="grid3">
+              <div class="card"><span class="card-i">C-01</span><h4>临床有效性</h4><p>必须能提供真实的干预动作与行为记录，而不是只会撒娇的玩偶。</p></div>
+              <div class="card"><span class="card-i">C-02</span><h4>儿童可接受度</h4><p>形态与声光不能触发感官防御；不能要求孩子先学会「使用」它。</p></div>
+              <div class="card"><span class="card-i">C-03</span><h4>家庭可负担性</h4><p>价格与维护成本要落在普通家庭的区间内，否则前两条没有意义。</p></div>
+            </div>
+            <p class="kicker">02.2 — 四条人因工程约束（可量纲的设计决定）</p>
+            <div class="grid4">
+              <div class="card"><span class="card-i">HF.01</span><h4>尺寸与比例</h4><p>高 28 cm 适配坐姿拥抱高度；宽 20 cm 符合 3–6 岁臂展；整机 ≤ 3 kg，儿童可自主抱起。</p></div>
+              <div class="card"><span class="card-i">HF.02</span><h4>感官适配</h4><p>哑光食品级 ABS，避免强光反射；暖黄柔光 LED，无频闪、可无级调光；音量上限 60 dB。</p></div>
+              <div class="card"><span class="card-i">HF.03</span><h4>交互设计</h4><p>3 处触摸触点位于最易触碰部位；移动速度 ≤ 1.5 km/h；仅 3 种基础表情。</p></div>
+              <div class="card"><span class="card-i">HF.04</span><h4>安全防护</h4><p>圆角 ≥ 5 mm；可拆卸件 &gt; 3 cm；工作电压 ≤ 24 V + 磁吸接口。</p></div>
+            </div>
+            <div class="cols">
+              <div>
+                <p class="kicker">02.3 — 形态选择：为什么是柯基</p>
+                <p class="body">动物形态承担了三件抽象不了的事：提供可被理解的情绪线索、提供不具威胁性的尺度、提供儿童已有的经验模型。在犬、兔、熊三个方向里，柯基的几何最合适——短粗圆润的肢体天然消除「细长结构会夹人」的联想；大耳与大头身比直接对应「幼崽」；低饱和米白与浅棕远比高饱和色安静。</p>
+              </div>
+              <div>
+                <p class="kicker">02.4 — 三位一体</p>
+                <ol class="findings">
+                  <li><b>陪伴</b><span>无条件接纳、永不疲倦。以抚触与眼神回应为主，不要求孩子正确操作。</span></li>
+                  <li><b>治疗</b><span>以游戏化任务承载社交与情绪训练；记录行为数据，生成个性化报告。</span></li>
+                  <li><b>监测</b><span>互动频次、触摸偏好、情绪状态、任务完成度，交给家长端与治疗师。</span></li>
+                </ol>
+              </div>
+            </div>
+          </article>
+<article class="sheet" data-file="x02" data-chapter="3">
+            <header class="sheet-head">
+              <span class="sheet-no">03</span>
+              <h3>造型与原型 <em>Prototype</em></h3>
+              <p>白模阶段刻意不加材质，就是为了先看清轮廓能不能被一只手抱住。三个草案比例、三视校核，再往下才是材质、表情与场景。</p>
+            </header>
+            <p class="kicker">03.1 — 三个草案的对比</p>
+            <table class="tbl">
+              <thead><tr><th>草案</th><th>尺寸规格</th><th>外观特点</th><th>交互体验</th></tr></thead>
+              <tbody>
+                <tr class="pick"><td>卡通柯基<em>主推</em></td><td>28 × 35 × 20 cm</td><td>短粗圆润，软质硅胶耳尾，米白 + 浅棕低饱和</td><td>头 / 腹 / 背 3 处感应区，开心、好奇、撒娇 3 种表情</td></tr>
+                <tr><td>卡通兔子</td><td>与柯基一致</td><td>可折叠摆动的长软硅胶耳朵，纯白 + 浅灰</td><td>增加「抚摸耳朵」专属交互</td></tr>
+                <tr><td>卡通小熊</td><td>30 × 32 × 22 cm</td><td>圆胖憨厚，可拆卸毛绒外套，深棕 + 米黄</td><td>「熊掌击掌」+ 欢快音效</td></tr>
+              </tbody>
+            </table>
+            <p class="kicker">03.2 — 三视白模校核</p>
+            <div class="trio">
+              <figure class="fig"><div class="fig-frame contain"><img src="assets/img/robot/clay-front.jpg" alt="正面白模"></div><figcaption><i>03-A</i><span>正面 · 高 28 / 宽 20 cm</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame contain"><img src="assets/img/robot/clay-side.jpg" alt="侧面白模"></div><figcaption><i>03-B</i><span>侧面 · 纵深 35 cm</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame contain"><img src="assets/img/robot/clay-top.jpg" alt="俯视白模"></div><figcaption><i>03-C</i><span>俯视 · ≤ 3 kg，背部磁吸充电</span></figcaption></figure>
+            </div>
+            <div class="cols">
+              <div>
+                <p class="kicker">03.3 — 最终方案规格</p>
+                <table class="tbl tight">
+                  <tbody>
+                    <tr><td>高度</td><td>28 cm · 适配坐姿拥抱高度</td></tr>
+                    <tr><td>宽度</td><td>20 cm · 符合 3–6 岁臂展</td></tr>
+                    <tr><td>纵深</td><td>35 cm · 兼顾内部空间与收纳</td></tr>
+                    <tr><td>重量</td><td>≤ 3 kg · 儿童可自主抱起</td></tr>
+                    <tr><td>主体</td><td>哑光食品级 ABS</td></tr>
+                    <tr><td>眼睛</td><td>暖黄柔光 LED · 开心 / 好奇 / 困倦</td></tr>
+                    <tr><td>触摸</td><td>头 / 腹 / 背 3 处</td></tr>
+                    <tr><td>速度</td><td>≤ 1.5 km/h</td></tr>
+                    <tr><td>音量</td><td>≤ 60 dB</td></tr>
+                    <tr><td>电压</td><td>≤ 24 V + 磁吸接口</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/robot/render-side.jpg" alt="柯基形态机器人侧面渲染"></div><figcaption><i>03-D</i><span>最终渲染 · 圆形凹陷是隐藏的触摸感应区</span></figcaption></figure>
+            </div>
+            <p class="kicker">03.4 — 使用场景</p>
+            <div class="trio">
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/robot/scene-home.jpg" alt="家庭场景"></div><figcaption><i>03-E</i><span>家庭 · 语言与社交训练</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/robot/scene-therapy.jpg" alt="康复机构场景"></div><figcaption><i>03-F</i><span>康复机构 · 治疗师辅助干预</span></figcaption></figure>
+              <figure class="fig"><div class="fig-frame"><img src="assets/img/robot/scene-outdoor.jpg" alt="户外场景"></div><figcaption><i>03-G</i><span>户外 · 探索引导</span></figcaption></figure>
+            </div>
+          </article>
+<article class="sheet" data-file="x02" data-chapter="4">
+            <header class="sheet-head">
+              <span class="sheet-no">04</span>
+              <h3>总结 <em>Conclusion</em></h3>
+              <p>一个面向儿童的方案，最终要被三拨人同时判定合格：孩子愿不愿意抱它，家长买不买得起，治疗师愿不愿意把工作流交给它。</p>
+            </header>
+            <div class="grid3">
+              <div class="card"><span class="card-i">V-01</span><h4>对儿童</h4><p>无条件接纳、永不疲倦的伙伴，在寓教于乐的游戏中提升社交互动与情感沟通能力。</p></div>
+              <div class="card"><span class="card-i">V-02</span><h4>对家长</h4><p>专业的家庭干预辅助工具，缓解经济与心理照护压力，记录每个成长片段。</p></div>
+              <div class="card"><span class="card-i">V-03</span><h4>对治疗师</h4><p>高效的数据记录与分析工具，减轻文书负担，支持个性化、精准的干预方案。</p></div>
+            </div>
+            <div class="statement">
+              <span class="tiny-label">VISION</span>
+              <p>每一个自闭症儿童都是一颗星星。希望用科技打破障碍，让每个孩子都拥有一个<b>温暖、智能的童年伙伴</b>。</p>
+            </div>
+            <div class="cols">
+              <div>
+                <p class="kicker">04.2 — 局限与下一步</p>
+                <ol class="findings warn">
+                  <li><b>没有儿童可用性测试</b><span>28 cm 与 20 cm 是从人体尺寸推出来的数字，还没有被真实儿童的手臂验证过。</span></li>
+                  <li><b>三种表情是判断，不是实证</b><span>「更少表情降低认知负担」成立，但 ASD 儿童的情绪识别边界缺少实验支持。</span></li>
+                  <li><b>卫生与耐久</b><span>软硅胶耳尾、毛绒层的清洗频次与寿命、内部防水等级，尚未进入结构验证。</span></li>
+                  <li><b>数据边界</b><span>行为数据给家长看多少、给治疗师看多少，涉及儿童隐私与监护权。</span></li>
+                </ol>
+              </div>
+              <div>
+                <p class="kicker">04.3 — 设计之外的三条收获</p>
+                <ol class="findings">
+                  <li><b>先定约束，再定形态</b><span>60 分贝、5 mm 圆角、3 cm 零件、1.5 km/h——这些数字比造型更早出现，也更能决定造型。</span></li>
+                  <li><b>减法比加法难</b><span>删掉屏幕、表情、触控点，每一次删减都在削弱说服力，但也都在降低孩子的门槛。</span></li>
+                  <li><b>形态本身就是治疗手段</b><span>柔软、圆润、低饱和、类幼崽——不是审美偏好，是让儿童放下防御的临床条件。</span></li>
+                </ol>
+              </div>
+            </div>
+          </article>
+</section>
+
+<!-- 联系 -->
+<section class="page contact-page">
+  <div>
+    <h2>取得联系</h2>
+    <p style="font-size:12px;color:#6f7066;max-width:52ch">
+      对案例、方法或合作有任何问题，直接写信即可。作品集网页版含完整的调研数据、
+      图版放大与两套明暗配色。
+    </p>
+    <p style="margin-top:22px"><span class="mail">zjc13708596686@163.com</span></p>
+  </div>
+  <div class="meta">
+    周俊宸 / 设计档案 · 2026<br>
+    视觉语言参照开源项目 kirahook/KIRAHOOK-CV-Web（MIT）
+  </div>
+</section>
+
+</body>
+</html>
