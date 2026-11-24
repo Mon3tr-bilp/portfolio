@@ -2,7 +2,7 @@
 <!-- 部署后把 loc 里的 USERNAME 与 portfolio 换成你的 GitHub 用户名与仓库名 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://USERNAME.github.io/portfolio/</loc>
+    <loc>https://mon3tr-bilp.github.io/portfolio/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
