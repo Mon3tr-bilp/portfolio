@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>文件不存在 · 周俊宸 设计档案</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#11181b">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/notfound.css">
+<style>
+  body { display: grid; place-items: center; min-height: 100svh; }
+  .nf {
+    position: relative; z-index: 2;
+    display: grid; gap: 18px; justify-items: start;
+    padding: 0 24px; max-width: 660px;
+  }
+  .nf small {
+    font: 500 10px/1 var(--mono); letter-spacing: .24em; text-transform: uppercase;
+    color: var(--accent);
+  }
+  .nf h1 { font-size: clamp(34px, 6vw, 58px); font-weight: 750; letter-spacing: .02em; line-height: 1.15; }
+  .nf p { font-size: 14.5px; line-height: 1.9; color: var(--muted); }
+  .nf a {
+    margin-top: 10px; display: inline-flex; align-items: center; gap: 12px;
+    padding: 12px 18px;
+    border: 1px solid var(--line);
+    font: 500 11px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase;
+    color: var(--ink);
+    transition: background .3s, color .3s, border-color .3s;
+  }
+  .nf a:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="array-scene" aria-hidden="true">
+  <div class="array-glow"></div>
+  <div class="array-grid"></div>
+</div>
+<div class="spectrum-field" aria-hidden="true"></div>
+
+<main class="nf">
+  <small>FILE NOT FOUND</small>
+  <h1>这份档案不存在</h1>
+  <p>你访问的路径没有对应的文件。回到档案库，那里有两份完整的方案：一份关于慢病老人的行车安全，一份关于自闭症儿童的陪伴机器人。</p>
+  <a href="./">← 返回档案库 / ARCHIVE</a>
+</main>
+</body>
+</html>
